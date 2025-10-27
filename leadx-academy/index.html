@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbloqueie o Novo Comercial com Inteligência Artificial</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-purple: #bf01c9;
+            --dark-bg: #0d0d0d;
+            --card-bg: #1a1a1a;
+            --text-light: #e0e0e0;
+            --text-muted: #d3d3d3;
+        }
+        
+        * {
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-purple);
+            border-color: var(--primary-purple);
+            font-weight: 700;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        @media (max-width: 768px) {
+            .navbar .btn-primary {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+        }
+        
+        .btn-primary:hover {
+            background-color: #9d0199;
+            border-color: #9d0199;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(191, 1, 201, 0.3);
+        }
+        
+        .hero-section {
+            background: var(--dark-bg);
+            padding: 0;
+            padding-top:50px;
+            min-height: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(191, 1, 201, 0.15) 0%, transparent 50%);
+        }
+
+        .hero-info-item i {
+            font-size: 2rem !important;
+        }
+
+        .hero-info-item strong {
+            font-size: 1.1rem;
+        }
+
+        .hero-banner {
+            background: var(--dark-bg);
+            padding: 0;
+            margin-top: 56px; /* Altura do navbar fixo */
+        }
+
+        .hero-banner img {
+            display: block;
+        }
+
+        .card-custom {
+            background-color: var(--card-bg);
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+        
+        .card-custom:hover {
+            border-color: var(--primary-purple);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(191, 1, 201, 0.2);
+        }
+        
+        .section-title {
+            font-weight: 800;
+            color: var(--primary-purple);
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .comparison-card {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            border-radius: 12px;
+            padding: 30px;
+        }
+        
+        .check-icon {
+            color: #0066ff;
+            font-size: 1.5rem;
+        }
+        
+        .x-icon {
+            color: #666;
+            font-size: 1.5rem;
+        }
+        
+        .testimonial-video {
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--card-bg);
+        }
+        
+        .price-tag {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-purple);
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+        }
+        
+        .navbar-dark {
+            background-color: rgba(13, 13, 13, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-purple) 0%, #ff01e8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .badge-custom {
+            background-color: var(--primary-purple);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .module-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-purple);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+        
+        .faq-button {
+            background: var(--card-bg);
+            border: 1px solid #2a2a2a;
+            color: var(--text-light);
+            text-align: left;
+            width: 100%;
+            padding: 20px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .faq-button:hover {
+            border-color: var(--primary-purple);
+        }
+        
+        .faq-button:not(.collapsed) {
+            background-color: #2a2a2a;
+            border-color: var(--primary-purple);
+        }
+        
+        .accordion-body {
+            background-color: var(--card-bg);
+            color: var(--text-light);
+        }
+        
+        .price-comparison {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            border-radius: 12px;
+            padding: 30px;
+            border: 2px solid var(--primary-purple);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#">LeadX <span class="gradient-text">Academy</span></a>
+            <button class="btn btn-primary btn-sm">Garantir Vaga</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Banner -->
+    <section class="hero-banner position-relative" id="inicio">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-12">
+                    <!-- Imagem Desktop (visível apenas em telas grandes) -->
+                    <img src="img/banner-desktop.png" alt="Banner Curso LeadX" class="img-fluid w-100 d-none d-md-block">
+                    
+                    <!-- Imagem Mobile (visível apenas em telas pequenas) -->
+                    <img src="img/banner-mobile.png" alt="Banner Curso LeadX" class="img-fluid w-100 d-block d-md-none">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Apresentação -->
+    <section class="py-5" id="apresentacao">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12 text-center">
+                    <span class="badge badge-custom mb-3"><i class="bi bi-lightning-fill me-2"></i>CURSO AO VIVO</span>
+                    
+                    <h1 class="display-2 fw-bold mb-4 text-white">Em poucas horas, você vai aprender a construir uma <span class="gradient-text">operação comercial inteligente</span></h1>
+                    
+                    <h2 class="h3 fw-normal text-white mb-4">Chegou o momento de deixar a rotina manual para trás.</h2>
+                    
+                    <p class="lead mb-5 px-lg-5 text-light">Neste intensivo, você vai entender como criar sistemas de vendas que funcionam sozinhos, com tecnologia acessível e processos que cabem em qualquer empresa.</p>
+                    
+                    <button class="btn btn-primary btn-lg pulse">
+                        <i class="bi bi-rocket-takeoff me-2"></i>Quero Garantir Minha Vaga
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="comparison-card h-100">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="x-icon me-3 text-danger">✕</div>
+                            <h3 class="h5 mb-0 text-light"><strong>Método Tradicional</strong></h3>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <span class="x-icon me-3 text-danger">✕</span>
+                            <p class="mb-0 text-secondary">61 leads por dia, em média</p>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <span class="x-icon me-3 text-danger">✕</span>
+                            <p class="mb-0 text-secondary">Dependência total de time humano</p>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <span class="x-icon me-3 text-danger">✕</span>
+                            <p class="mb-0 text-secondary">Prospecção com ritmo irregular</p>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <span class="x-icon me-3 text-danger">✕</span>
+                            <p class="mb-0 text-secondary">Escala limitada</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="comparison-card h-100 border border-2" style="border-color: var(--primary-purple) !important;">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="check-icon me-3">✓</div>
+                            <h3 class="h5 mb-0"><strong>Com LeadX + Automação</strong></h3>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <span class="check-icon me-3">✓</span>
+                            <p class="mb-0 text-secondary"><strong>Mais de 1.000 leads por dia</strong></p>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <span class="check-icon me-3">✓</span>
+                            <p class="mb-0 text-secondary"><strong>Operação 100% automatizada</strong></p>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <span class="check-icon me-3">✓</span>
+                            <p class="mb-0 text-secondary"><strong>Ritmo constante, 24/7</strong></p>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <span class="check-icon me-3">✓</span>
+                            <p class="mb-0 text-secondary"><strong>Sem aumento de equipe</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Para Quem é Esse Curso -->
+    <section class="py-5" id="para-quem">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Para Quem é Esse Curso?</h2>
+                <p class="lead text-secondary">Ideal para quem quer implementar a IA no seu negócio e automatizar vendas sem enrolação</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-custom p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-briefcase-fill fs-1 me-3" style="color: var(--primary-purple);"></i>
+                            <h4 class="h5 mb-0">Donos de Negócios</h4>
+                        </div>
+                        <p class="text-secondary mb-0">Que querem escalar vendas sem aumentar custos com equipe</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-custom p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-graph-up-arrow fs-1 me-3" style="color: var(--primary-purple);"></i>
+                            <h4 class="h5 mb-0">Gestores Comerciais</h4>
+                        </div>
+                        <p class="text-secondary mb-0">Que precisam aumentar a eficiência do time de vendas</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-custom p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-headset fs-1 me-3" style="color: var(--primary-purple);"></i>
+                            <h4 class="h5 mb-0">SDRs e Vendedores</h4>
+                        </div>
+                        <p class="text-secondary mb-0">Que querem prospectar mais com menos esforço manual</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-custom p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-building fs-1 me-3" style="color: var(--primary-purple);"></i>
+                            <h4 class="h5 mb-0">Agências</h4>
+                        </div>
+                        <p class="text-secondary mb-0">Que querem oferecer soluções modernas de automação aos clientes</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-custom p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-rocket-takeoff fs-1 me-3" style="color: var(--primary-purple);"></i>
+                            <h4 class="h5 mb-0">Empreendedores</h4>
+                        </div>
+                        <p class="text-secondary mb-0">Que estão começando e querem estruturar um comercial escalável</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-custom p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-stars fs-1 me-3" style="color: var(--primary-purple);"></i>
+                            <h4 class="h5 mb-0">Inovadores</h4>
+                        </div>
+                        <p class="text-secondary mb-0">Que querem estar na vanguarda da tecnologia aplicada a vendas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <div class="alert alert-info d-inline-block" style="background-color: rgba(191, 1, 201, 0.1); border-color: var(--primary-purple); max-width: 800px;">
+                    <p class="mb-0 text-light"><i class="bi bi-cpu-fill me-2"></i><strong>Materiais, templates e ferramentas usadas em operações reais com IA.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Que Você Vai Aprender -->
+    <section class="py-5 bg-dark" id="modulos">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">O que você vai aprender</h2>
+                <p class="lead text-light mb-2">As grandes empresas já estão usando IA para reduzir custos e aumentar vendas.</p>
+                <p class="lead text-light">Agora é sua vez de aplicar isso no seu negócio — de forma simples e prática.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card-custom p-4 h-100">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="module-number me-4 flex-shrink-0">1</div>
+                            <div>
+                                <h4 class="h5 mb-3">A revolução da IA nos negócios</h4>
+                                <p class="text-secondary mb-0">Entenda como a IA está mudando o mercado e eliminando processos manuais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-custom p-4 h-100">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="module-number me-4 flex-shrink-0">2</div>
+                            <div>
+                                <h4 class="h5 mb-3">Novo modelo de vendas inteligente</h4>
+                                <p class="text-secondary mb-0">Aprenda a montar um comercial automatizado que trabalha por você 24h.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-custom p-4 h-100">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="module-number me-4 flex-shrink-0">3</div>
+                            <div>
+                                <h4 class="h5 mb-3">Geração de leads e atendimento automático</h4>
+                                <p class="text-secondary mb-0">Descubra como prospectar e responder clientes automaticamente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-custom p-4 h-100">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="module-number me-4 flex-shrink-0">4</div>
+                            <div>
+                                <h4 class="h5 mb-3">IA aplicada ao seu comercial</h4>
+                                <p class="text-secondary mb-0">Implemente um assistente virtual que conversa e qualifica leads sozinho.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="card-custom p-4">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="module-number me-4 flex-shrink-0">5</div>
+                            <div>
+                                <h4 class="h5 mb-3">Escalando com previsibilidade</h4>
+                                <p class="text-secondary mb-0">Aprenda a acompanhar seus resultados e crescer com base em dados.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <h4 class="mb-5">O que você leva pra casa:</h4>
+                <div class="row justify-content-center g-4">
+                    <div class="col-md-4 col-sm-6">
+                        <i class="bi bi-robot fs-1 d-block mb-3" style="color: var(--primary-purple); font-size: 3rem !important;"></i>
+                        <h5 class="mb-2">Assistente de IA configurado</h5>
+                        <p class="text-secondary">Um agente pronto para atender, qualificar e agendar clientes automaticamente.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <i class="bi bi-gear-fill fs-1 d-block mb-3" style="color: var(--primary-purple); font-size: 3rem !important;"></i>
+                        <h5 class="mb-2">Modelos de automação de vendas</h5>
+                        <p class="text-secondary">Fluxos simples para gerar leads e responder mensagens 24h por dia.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <i class="bi bi-graph-up-arrow fs-1 d-block mb-3" style="color: var(--primary-purple); font-size: 3rem !important;"></i>
+                        <h5 class="mb-2">Painel de resultados e métricas</h5>
+                        <p class="text-secondary">Dashboard para acompanhar performance e prever crescimento.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <i class="bi bi-lightbulb-fill fs-1 d-block mb-3" style="color: var(--primary-purple); font-size: 3rem !important;"></i>
+                        <h5 class="mb-2">Guia prático do novo comercial</h5>
+                        <p class="text-secondary">Passo a passo para estruturar um modelo de vendas inteligente e moderno.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <i class="bi bi-gift-fill fs-1 d-block mb-3" style="color: var(--primary-purple); font-size: 3rem !important;"></i>
+                        <h5 class="mb-2">Bônus exclusivos da imersão</h5>
+                        <p class="text-secondary">Materiais, templates e ferramentas usadas em operações reais com IA.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- IMAGEM DO NOTEBOOK AQUI -->
+            <div class="text-center mt-5 mb-5">
+                <img src="img/computador-realista.png" alt="LeadX Dashboard" class="img-fluid rounded shadow-lg" style="max-width: 800px; width: 100%;">
+            </div>
+            
+            <div class="text-center mt-5">
+                <div class="alert alert-info d-inline-block" style="background-color: rgba(191, 1, 201, 0.1); border-color: var(--primary-purple); max-width: 800px;">
+                    <p class="mb-0 text-light"><i class="bi bi-chat-dots me-2"></i><strong>Em poucas horas, você vai entender e aplicar o mesmo tipo de automação que as big techs usam — adaptado à sua realidade.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="py-5" id="diferenciais">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Por Que Este Curso é Diferente?</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                             style="width: 100px; height: 100px; background-color: var(--card-bg);">
+                            <i class="bi bi-broadcast fs-1" style="color: var(--primary-purple);"></i>
+                        </div>
+                        <h4 class="h5 mb-3">100% Ao Vivo</h4>
+                        <p class="text-secondary">Interação real, perguntas respondidas na hora e networking com outros participantes</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                             style="width: 100px; height: 100px; background-color: var(--card-bg);">
+                            <i class="bi bi-tools fs-1" style="color: var(--primary-purple);"></i>
+                        </div>
+                        <h4 class="h5 mb-3">Material Prático</h4>
+                        <p class="text-secondary">Templates, planilhas e fluxos prontos para aplicar no mesmo dia</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                             style="width: 100px; height: 100px; background-color: var(--card-bg);">
+                            <i class="bi bi-people-fill fs-1" style="color: var(--primary-purple);"></i>
+                        </div>
+                        <h4 class="h5 mb-3">Turma Reduzida</h4>
+                        <p class="text-secondary">Vagas limitadas para garantir atenção personalizada a cada participante</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                             style="width: 100px; height: 100px; background-color: var(--card-bg);">
+                            <i class="bi bi-headphones fs-1" style="color: var(--primary-purple);"></i>
+                        </div>
+                        <h4 class="h5 mb-3">Suporte Ao Vivo</h4>
+                        <p class="text-secondary">Tire suas dúvidas em tempo real durante toda a duração do curso</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="py-5 bg-dark" id="depoimentos">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Resultados Reais</h2>
+                <p class="lead text-light">Veja o que nossos alunos e clientes alcançaram com LeadX</p>
+            </div>
+            
+            <!-- Primeiro Depoimento -->
+            <div class="row g-4 align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="testimonial-video">
+                        <div class="ratio ratio-16x9">
+                            <!-- COLOQUE SEU VÍDEO 1 AQUI -->
+                            <iframe src="img/IMG_2805.mp4" title="Depoimento 1" allowfullscreen></iframe>
+                            <!-- OU se for embed do YouTube/Vimeo, cole o código aqui -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-custom p-4 mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px;">
+                                <i class="bi bi-person-fill fs-3 text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Cliente LeadX</h5>
+                                <small class="text-light">CEO, Tech Company</small>
+                            </div>
+                        </div>
+                        <p class="mb-0 text-light">"Aumentamos nossa geração de leads em 1.547% após implementar o LeadX. A automação nos permitiu focar no que realmente importa: fechar negócios."</p>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="card-custom p-3 text-center">
+                                <h3 class="gradient-text mb-2">+1000</h3>
+                                <p class="small text-light mb-0">Leads/dia gerados</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card-custom p-3 text-center">
+                                <h3 class="gradient-text mb-2">24/7</h3>
+                                <p class="small text-light mb-0">Operação contínua</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segundo Depoimento -->
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="testimonial-video">
+                        <div class="ratio ratio-16x9">
+                            <!-- COLOQUE SEU VÍDEO 2 AQUI -->
+                            <iframe src="img/IMG_2806.mp4" title="Depoimento 2" allowfullscreen></iframe>
+                            <!-- OU se for embed do YouTube/Vimeo, cole o código aqui -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="card-custom p-4 mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px;">
+                                <i class="bi bi-person-fill fs-3 text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Cliente LeadX</h5>
+                                <small class="text-light">CEO, Tech Company</small>
+                            </div>
+                        </div>
+                        <p class="mb-0 text-light">"Com a automação, conseguimos escalar de 50 para 500 leads por semana sem contratar mais ninguém. Revolucionou nosso comercial."</p>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="card-custom p-3 text-center">
+                                <h3 class="gradient-text mb-2">10x</h3>
+                                <p class="small text-light mb-0">Aumento em leads</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card-custom p-3 text-center">
+                                <h3 class="gradient-text mb-2">R$0</h3>
+                                <p class="small text-light mb-0">Custo extra</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bônus Exclusivos -->
+    <section class="py-5" id="bonus">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">🎁 Bônus Exclusivos</h2>
+                <p class="lead text-light">💡 Benefícios extras para você aplicar o que aprendeu e começar a operar com IA na prática.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card-custom p-4 h-100">
+                        <div class="d-flex align-items-start">
+                            <div class="rounded-circle d-inline-flex align-items-center justify-content-center me-3 flex-shrink-0" 
+                                 style="width: 60px; height: 60px; background-color: rgba(191, 1, 201, 0.2);">
+                                <i class="bi bi-robot fs-3" style="color: var(--primary-purple);"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 mb-2"><strong>🤖 Criação gratuita do seu agente de IA</strong></h4>
+                                <p class="text-light mb-0">Monte seu próprio agente inteligente de atendimento e prospecção, sem custo inicial.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom p-4 h-100">
+                        <div class="d-flex align-items-start">
+                            <div class="rounded-circle d-inline-flex align-items-center justify-content-center me-3 flex-shrink-0" 
+                                 style="width: 60px; height: 60px; background-color: rgba(191, 1, 201, 0.2);">
+                                <i class="bi bi-lightning-charge-fill fs-3" style="color: var(--primary-purple);"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 mb-2"><strong>⚡ Créditos gratuitos para começar a operar</strong></h4>
+                                <p class="text-light mb-0">Receba créditos de IA para testar automações, enviar mensagens e gerar seus primeiros resultados.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom p-4 h-100">
+                        <div class="d-flex align-items-start">
+                            <div class="rounded-circle d-inline-flex align-items-center justify-content-center me-3 flex-shrink-0" 
+                                 style="width: 60px; height: 60px; background-color: rgba(191, 1, 201, 0.2);">
+                                <i class="bi bi-whatsapp fs-3" style="color: var(--primary-purple);"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 mb-2"><strong>💬 Tutorial Plug & Play WhatsApp</strong></h4>
+                                <p class="text-light mb-0">Aprenda o passo a passo para automatizar conversas no WhatsApp Business em poucos minutos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom p-4 h-100">
+                        <div class="d-flex align-items-start">
+                            <div class="rounded-circle d-inline-flex align-items-center justify-content-center me-3 flex-shrink-0" 
+                                 style="width: 60px; height: 60px; background-color: rgba(191, 1, 201, 0.2);">
+                                <i class="bi bi-calculator fs-3" style="color: var(--primary-purple);"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 mb-2"><strong>📊 Simulador de economia</strong></h4>
+                                <p class="text-light mb-0">Compare quanto você pode economizar usando IA no lugar de processos manuais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card-custom p-4">
+                        <div class="d-flex align-items-start">
+                            <div class="rounded-circle d-inline-flex align-items-center justify-content-center me-3 flex-shrink-0" 
+                                 style="width: 60px; height: 60px; background-color: rgba(191, 1, 201, 0.2);">
+                                <i class="bi bi-mortarboard-fill fs-3" style="color: var(--primary-purple);"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 mb-2"><strong>🎓 Consultoria de implementação</strong></h4>
+                                <p class="text-light mb-0">Ganhe 1 hora de orientação personalizada para ajustar suas automações e colocar tudo para rodar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <div class="alert alert-info d-inline-block" style="background-color: rgba(191, 1, 201, 0.1); border-color: var(--primary-purple); max-width: 900px;">
+                    <p class="mb-0 text-light"><i class="bi bi-chat-dots me-2"></i><strong>💬 Ao final da imersão, você não só entende o poder da Inteligência Artificial — como já sai com ela funcionando no seu negócio.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre o Instrutor -->
+    <section class="py-5 bg-dark" id="instrutor">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Quem Vai Te Ensinar</h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                    <img src="img/imagem-jhony.jpg" alt="Uma foto sua aq jhony" class="rounded-circle img-fluid mb-3" style="max-width: 250px;">
+                    <h3 class="h4 mb-2">Jhony Matias</h3>
+                    <p class="text-white">Fundador LeadX & Especialista em Automação</p>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card-custom p-4 mb-4">
+                        <h4 class="h5 mb-3"><strong>Experiência Comprovada</strong></h4>
+                        <p class="text-secondary mb-3">Especialista em automação comercial e IA aplicada a vendas, com mais de X anos de experiência ajudando empresas a escalarem seus resultados.</p>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="text-center">
+                                    <h3 class="gradient-text mb-0">+1000</h3>
+                                    <small class="text-white">Leads/dia gerados</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center">
+                                    <h3 class="gradient-text mb-0">+50</h3>
+                                    <small class="text-white">Empresas atendidas</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center">
+                                    <h3 class="gradient-text mb-0">+R$10M</h3>
+                                    <small class="text-white">Em vendas geradas</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-custom p-4">
+                        <h5 class="mb-3">Marcas que Confiam</h5>
+                        <div class="row g-3 align-items-center text-center">
+                            <div class="col-4 col-md-2">
+                                <div class="bg-secondary rounded p-3">
+                                    <img src="img/logo-oi-Photoroom.png" alt="" class="img-fluid" style="max-height: 70px; object-fit: contain;">
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-2">
+                                <div class="bg-secondary rounded p-3">
+                                    <img src="img/logo-sei.png" alt="" class="img-fluid" style="max-height: 70px; object-fit: contain;">
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-2">
+                                <div class="bg-secondary rounded p-3">
+                                    <img src="img/logo-start.png" alt="" class="img-fluid" style="max-height: 70px; object-fit: contain;">
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-2">
+                                <div class="bg-secondary rounded p-3">
+                                    <img src="img/logo-completa-Photoroom.png" alt="" class="img-fluid" style="max-height: 70px; object-fit: contain;">
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-2">
+                                <div class="bg-secondary rounded p-3">
+                                    <img src="img/logo-down-Photoroom.png" alt="" class="img-fluid" style="max-height: 70px; object-fit: contain;">
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-2">
+                                <div class="bg-secondary rounded p-3">
+                                    <img src="img/logo-viaford.png" alt="" class="img-fluid" style="max-height: 70px; object-fit: contain;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Oferta Final -->
+    <section class="py-5" id="oferta">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Investimento Real vs Nosso Curso</h2>
+                <p class="lead text-white">Veja quanto você economiza</p>
+            </div>
+            
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <div class="price-comparison">
+                        <h4 class="mb-4 text-center">Para estruturar e automatizar seu comercial você teria que investir aproximadamente:</h4>
+                        <div class="row g-3 mb-4">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3">
+                                    <span>CRM robusto para seu time</span>
+                                    <strong>R$ 12.000 - R$ 36.000/ano</strong>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3">
+                                    <span>SDR humano (salário + encargos)</span>
+                                    <strong>R$ 30.000/ano</strong>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3">
+                                    <span>Assinatura de IA + tokens</span>
+                                    <strong>R$ 2.400 - R$ 6.000/ano</strong>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3">
+                                    <span>Implementação de IA por agência</span>
+                                    <strong>R$ 4.000</strong>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3">
+                                    <span>Templates, playbook e fluxos prontos</span>
+                                    <strong>R$ 1.000</strong>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-0">Total estimado no primeiro ano:</h4>
+                                    <h3 class="mb-0 old-price">R$ 46.000+</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card-custom p-5 text-center border border-3" style="border-color: var(--primary-purple) !important;">
+                        <span class="badge badge-custom mb-3">OFERTA ESPECIAL</span>
+                        <h3 class="mb-3">E tudo isso você começa a aprender a montar no nosso curso ao vivo por apenas:</h3>
+                        <div class="price-tag mb-3">R$ 197,00</div>
+                        <p class="lead mb-4"><strong>Economize mais de R$ 40 mil</strong> e saia aplicando no mesmo dia!</p>
+                        
+                        <button class="btn btn-primary btn-lg w-100 mb-3">
+                            <i class="bi bi-rocket-takeoff me-2"></i>Quero Garantir Minha Vaga Agora
+                        </button>
+                        
+                        <div class="mt-4 pt-4 border-top border-secondary">
+                            <p class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--primary-purple);"></i>Vagas Limitadas</p>
+                            <p class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--primary-purple);"></i>Acesso ao Replay por 30 dias</p>
+                            <p class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--primary-purple);"></i>Todos os Templates e Bônus</p>
+                            <p class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--primary-purple);"></i>7 Dias Grátis do LeadX</p>
+                            <p class="mb-0"><i class="bi bi-check-circle-fill me-2" style="color: var(--primary-purple);"></i>Certificado de Conclusão</p>
+                        </div>
+                        
+                        <div class="alert alert-info mt-4 mb-0" style="background-color: rgba(191, 1, 201, 0.1); border-color: var(--primary-purple);">
+                            <i class="bi bi-shield-check me-2"></i><strong>Garantia de Satisfação:</strong> Se não gostar, devolvemos 100% do seu investimento em até 7 dias
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-5 bg-dark" id="faq">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="mb-3">
+                            <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><strong>Eu preciso entender de tecnologia ou programação pra participar?</strong></span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </div>
+                            </button>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    De jeito nenhum. A imersão é prática e foi feita pra quem nunca mexeu com IA antes. Você vai aprender o passo a passo de forma simples e aplicada.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><strong>Vou aprender algo que realmente dá pra usar no meu negócio?</strong></span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </div>
+                            </button>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sim! Você vai montar na prática o seu próprio sistema de vendas automatizado, com exemplos reais e prontos pra adaptar ao seu negócio.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><strong>Eu consigo aplicar mesmo que minha empresa seja pequena?</strong></span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </div>
+                            </button>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Com certeza. A proposta é justamente mostrar como pequenas e médias empresas podem usar IA pra fazer o que as grandes já estão fazendo — mas sem gastar muito.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><strong>O curso é gravado ou ao vivo?</strong></span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </div>
+                            </button>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    É 100% ao vivo, com interação e espaço pra tirar dúvidas na hora.<br>
+                                    Nada de conteúdo gravado e engessado — você aprende vendo tudo funcionar.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><strong>O que eu ganho participando dessa imersão?</strong></span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </div>
+                            </button>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Além do conteúdo, você vai criar seu agente de IA gratuitamente e ganhar créditos pra começar a operar.<br>
+                                    Sai do curso com o sistema rodando e pronto pra gerar resultado.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><strong>Preciso contratar alguma ferramenta pra usar o que vou aprender?</strong></span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </div>
+                            </button>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Não. Durante o curso você recebe acesso e créditos gratuitos pra aplicar tudo.<br>
+                                    Se quiser continuar depois, aí sim você pode recarregar quando quiser.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><strong>Qual é a duração e quando acontece?</strong></span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </div>
+                            </button>
+                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    A imersão tem aproximadamente 2 horas, em um único encontro online.<br>
+                                    A próxima turma será divulgada em breve — as vagas são limitadas.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><strong>Posso participar com meu time de vendas?</strong></span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </div>
+                            </button>
+                            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Pode sim! Inclusive é uma ótima forma de alinhar a equipe com um modelo de vendas moderno e inteligente.<br>
+                                    Basta cada integrante fazer o cadastro individual
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><strong>E se eu não conseguir acompanhar ao vivo?</strong></span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </div>
+                            </button>
+                            <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    A gravação ficará disponível por apenas R$39,90 pra você assistir depois.<br>
+                                    Mas recomendamos participar ao vivo pra aproveitar a prática e o suporte.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center border-top border-secondary">
+        <div class="container">
+            <p class="text-white mb-2">&copy; 2025 LeadX Academy. Todos os direitos reservados.</p>
+            <p class="text-white small mb-0">Transformando comerciais com IA e Automação</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
