@@ -1,0 +1,362 @@
+/* Estilo personalizado para o header */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bg-red-sei{
+  background-color: #fc022a;
+}
+
+.text-red-sei{
+  color: #fc022a;
+}
+
+
+/*-------------------- HEADER ----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.header-custom {
+  background-color: transparent;
+  position: static;
+}
+
+.social-icons a {
+  color: rgb(0, 0, 0);
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #fc022a;
+}
+
+.btn-custom {
+  background-color: #fc022a;
+  color: white;
+  border-radius: 25px;
+  padding: 6px 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-custom:hover {
+  background-color: #fc022a;
+  color: white;
+}
+
+/* ---------------- HEROE ----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.juntos{
+  background-image: url('img/fundo-hero.png'); /* sua imagem de fundo */
+  background-attachment: fixed;
+}
+
+.hero-section {
+  padding: 80px 0;
+}
+
+.hero-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-hero {
+  padding: 0.75rem 1.5rem;      /* Aumenta o espaço interno */
+  font-size: 1.6rem;            /* Texto maior */
+  min-width: 200px;             /* Largura mínima */
+  border-radius: 20px;           /* Bordas mais suaves (opcional) */
+}
+
+
+/*----------------- DISPOSITIVOS ------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.container-camera{
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kit-section{
+  background-color: #b10003;
+}
+
+.titulo-cameras{
+  font-size: 3rem;
+  max-width: 500px;            /* Aumenta o tamanho do título */
+}
+
+.titulo-cameras h1{
+  font-size: 3rem;
+}
+
+.card-gradient {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.158), transparent), #fc022a;
+  color: white;
+  border-radius: 20px;               /* Bordas mais arredondadas */
+  padding: 2rem;                     /* Mais espaço interno */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;              /* Centraliza verticalmente */
+  gap: 1.5rem;
+  min-height: 150px;
+}
+
+.card-gradient img.icon-img {
+  width: 48px;                      /* Imagem um pouco menor */
+  height: auto;
+}
+
+.card-gradient h5 {
+  font-size: 1.1rem;                  /* Texto levemente menor */
+  margin-bottom: 0.5rem;
+}
+
+.card-gradient p {
+  font-size: 1.1rem;                /* Texto levemente menor */
+  margin-bottom: 0;
+}
+
+.centralizar-y {
+  align-items: center;
+}
+
+/*----------------- Seção: VOARODA ------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.corUm{
+  background-color: #b10003;
+  border: none;
+  outline: none;
+}
+
+.voadora{
+  padding: 0px !important;
+}
+
+/*Card mesmo, o central flutuante*/
+.card-destaque {
+  background-image: url('img/fundo-camera.png'); /* sua imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  width: 1000px;
+}
+
+.card-destaque::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* blackout */
+  z-index: 1;
+}
+
+.card-destaque .row {
+  position: relative;
+  z-index: 2;
+}
+
+/*----------------- Seção: Marcas do Grupo ------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Seção das marcas */
+
+.img-logos {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/*--------------------------- PLANOS ---------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Seção com imagem de fundo e blackout */
+
+.planos-section {
+  position: relative;
+  background-image: url('img/fundo-planos.png'); /* sua imagem apagada */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.planos-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75); /* blackout */
+  z-index: 2;
+}
+
+.planos-section .container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inicio-plano {
+  background-color: #1c1c1c; /* fundo escuro */
+  padding: 20px 30px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.inicio-plano h1 {
+  letter-spacing: -0.5px;
+}
+
+.inicio-plano p {
+  color: #ccc;
+}
+
+/* .os-planos-msm li{
+  font-size: ;
+
+} */
+
+/* Ícone circular flutuante no topo do card */
+.img-plano-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.titulo-do-plano{
+  background-color: #fc022a;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+
+
+/*--------------------------- EMPRESAS QUE CONFIAM ---------------------------------------------------------------------------------------------------------------------------------------------------*/
+.mobile{
+  display: none;
+}
+
+.clientes-section {
+  padding-bottom: 350px;
+}
+
+.logo-cliente {
+  max-height: 100px;
+  object-fit: contain;
+  border: 1px solid #ccc;       /* Bordinha fininha cinza */
+  border-radius: 8px;             /* Cantos arredondados */
+  padding: 4px;                   /* Espaço interno pra não grudar na borda */
+  background-color: #fff;       /* Fundo branco pra destacar */
+  width: 100%;
+  max-width: 150px;               /* ou o valor que quiser */
+}
+
+.custom-control {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  padding: 3px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #444444; /* vermelho SEI */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/*--------------------------- EMPRESAS QUE CONFIAM 22222222 ---------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.so-padding-bottom{
+  padding-bottom: 300px;
+}
+
+.logo-cliente {
+  max-height: 140px;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 6px;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.custom-control {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #fc022a;
+  border-radius: 50%;
+  padding: 12px;
+}
+
+/*--------------------------- VOADORA 2.0 ---------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.voadora2{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.card-voadora2{
+  border-radius: 40px;
+  position: absolute;
+  background-color: #fc022a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1250px;
+  height: 400px;
+  padding: 0px 60px;
+}
+
+.card-voadora2 .texto{
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content: center;
+  width: auto;
+  height: 100%;
+}
+
+.card-voadora2 .imagem{
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-voadora2 .imagem img{
+  height: 115%;
+}
+
+/*--------------------------- FOOTER ---------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.footer-sei {
+  padding-top: 350px;
+  background-color: #afafaf;
+  font-size: 0.95rem;
+}
+
+.footer-sei p {
+  margin-bottom: 0.4rem;
+}

@@ -1,0 +1,98 @@
+@media (max-width: 1105px) {
+
+
+
+.card-destaque {
+  width: 100% !important;
+}
+
+.quebrar{
+    flex-direction: column;
+    width: 100%;
+}
+.ocupar100{
+    width: 100%;
+}
+
+}
+
+
+@media (max-width: 770px) {
+    .desktop{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1250px) {
+
+    .card-voadora2{
+        flex-direction: column;
+        padding: 30px;
+        width: 90%;
+        height: auto;
+    }
+
+    .card-voadora2 .texto{
+        display: flex;
+        flex-direction: column;
+        align-items: top;
+        justify-content: center;
+        width: auto;
+        width: 100%;
+    }
+
+    .card-voadora2 .imagem{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-voadora2 .imagem img{
+        width: 100%;
+        height: auto;
+        padding-top: 15px;
+    }
+
+
+
+    /*HEADER*/
+    .logo-header{
+        height: 40px;
+    }
+    .fale-conosco{
+        font-size: 12px;
+    }
+
+
+}
+
+
+
+
+
+/*CARROSSEL*/
+@media (max-width: 500px) {
+
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
+
+}
