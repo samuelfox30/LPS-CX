@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratório de Clonagem</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-mobile.css">
+</head>
+<body class="full-height background-gif">
+
+  <!-- Top Header -->
+  <!-- Top Header -->
+    <header class="header-top d-flex justify-content-between align-items-center px-4 py-3">
+    <h1 class="titulo-principal m-0">Laboratório de Agentes</h1>
+    <button id="abrir-form-desktop" class="btn-proximo">Criar Agente</button>
+    </header>
+
+  <!-- Main Layout -->
+  <div class="all">
+    
+    <!-- Painel Esquerdo -->
+    <section class="painel-esquerdo paineis-laterais">
+
+      <div class="desktop">
+      <div class="card painel-card">
+        <div class="card-body">
+          <h5 class="card-title text-center">
+            <i class="bi bi-person-badge me-2"></i>Nome do Agente
+          </h5>
+          <div class="input-group custom-input mt-2">
+            <span class="input-group-text bg-dark text-white"><i class="bi bi-pencil"></i></span>
+            <input type="text" class="form-control nome-agente" placeholder="Digite o nome do agente" maxlength="20">
+          </div>
+        </div>
+      </div>
+
+      <div class="box-of-selection">
+      <!-- Gênero: Masculino -->
+      <h5 class="text-center mb-3 text-white">🧬 Gênero</h5>
+      <div class="genero-grid">
+        <div class="genero-box">
+          <input type="radio" name="genero" id="masculino" value="Masculino">
+          <label for="masculino">
+            <i class="bi bi-person-standing"></i>
+          </label>
+        </div>
+        <div class="genero-box">
+          <input type="radio" name="genero" id="feminino" value="Feminino">
+          <label for="feminino">
+            <i class="bi bi-person-standing-dress"></i>
+          </label>
+        </div>
+      </div>
+      </div>
+
+      <div class="box-of-selection">
+      <h5 class="text-left mb-3 text-white">🧠 Capacidades do Agente</h5>
+        <div class="habilidades-grid">
+        <div class="habilidade-box">
+            <input type="checkbox" id="cap1">
+            <label for="cap1">
+            <i class="bi bi-lightning-charge-fill"></i>
+            <span>Qualificação em tempo real</span>
+            </label>
+        </div>
+        <div class="habilidade-box">
+            <input type="checkbox" id="cap2">
+            <label for="cap2">
+            <i class="bi bi-pencil-square"></i>
+            <span>Anotação automática</span>
+            </label>
+        </div>
+        <div class="habilidade-box">
+            <input type="checkbox" id="cap3">
+            <label for="cap3">
+            <i class="bi bi-arrow-repeat"></i>
+            <span>Atualização no CRM</span>
+            </label>
+        </div>
+        <div class="habilidade-box">
+            <input type="checkbox" id="cap4">
+            <label for="cap4">
+            <i class="bi bi-calendar-check"></i>
+            <span>Agendamento de reuniões</span>
+            </label>
+        </div>
+        <div class="habilidade-box">
+            <input type="checkbox" id="cap5">
+            <label for="cap5">
+            <i class="bi bi-whatsapp"></i>
+            <span>Notificação via WhatsApp</span>
+            </label>
+        </div>
+        <div class="habilidade-box">
+            <input type="checkbox" id="cap6">
+            <label for="cap6">
+            <i class="bi bi-person-check"></i>
+            <span>Transferência para closer</span>
+            </label>
+        </div>
+        <div class="habilidade-box">
+            <input type="checkbox" id="cap7">
+            <label for="cap7">
+            <i class="bi bi-bar-chart-line"></i>
+            <span>Registro em CRM + Google Ads</span>
+            </label>
+        </div>
+        </div>
+        </div>
+      </div>
+
+    </section>  
+
+
+
+    <!-- Painel Central -->
+    <section class="painel-central">
+      <img id="img-agente" class="img-central" alt="Preview do Agente">
+    </section>
+
+
+
+<!--------------------------------------------- START MOBILE --------------------------------------------->
+<form id="form-passo-a-passo" class="mobile">
+
+
+<div class=" box-of-selection passo" id="passo-1">
+<!-- Gênero: Masculino -->
+<h5 class="text-center mb-3 text-white">🧬 Gênero</h5>
+<div class="genero-grid">
+  <div class="genero-box">
+    <input type="radio" name="genero" id="masculino" value="Masculino">
+    <label for="masculino">
+      <i class="bi bi-person-standing"></i>
+    </label>
+  </div>
+  <div class="genero-box">
+    <input type="radio" name="genero" id="feminino" value="Feminino">
+    <label for="feminino">
+      <i class="bi bi-person-standing-dress"></i>
+    </label>
+  </div>
+</div>
+<button type="button" class="proximo">Próximo</button>
+</div>
+
+
+<div class="box-of-selection passo" id="passo-1">
+<div class="card painel-card">
+  <div class="card-body">
+    <h5 class="card-title text-center">
+      <i class="bi bi-person-badge me-2"></i>Nome do Agente
+    </h5>
+    <div class="input-group custom-input mt-2">
+      <span class="input-group-text bg-dark text-white"><i class="bi bi-pencil"></i></span>
+      <input type="text" class="form-control nome-agente" name="nome_agente" placeholder="Digite o nome do agente" maxlength="20">
+    </div>
+  </div>
+</div>
+<button type="button" class="voltar">Voltar</button>
+<button type="button" class="proximo">Próximo</button>
+</div>
+
+    <div class="box-of-selection passo" id="passo-1">
+      <h5 class="text-left mb-3 text-white">🎭 Personalidade do Agente</h5>
+      <div class="personalidade-grid">
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="clonarMobile" value="Clonar">
+          <label for="clonarMobile" class="energia-ativa">
+            <i class="bi bi-person-lines-fill"></i>
+            <span>Clonar Tom</span>
+          </label>
+        </div>
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="formalMobile" value="Formal">
+          <label for="formalMobile" class="energia-ativa">
+            <i class="bi bi-person-fill"></i>
+            <span>Formal</span>
+          </label>
+        </div>
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="casualMobile" value="Casual">
+          <label for="casualMobile" class="energia-ativa">
+            <i class="bi bi-person"></i>
+            <span>Casual</span>
+          </label>
+        </div>
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="engracadoMobile" value="Engracado">
+          <label for="engracadoMobile" class="energia-ativa">
+            <i class="bi bi-emoji-smile"></i>
+            <span>Engraçado</span>
+          </label>
+        </div>
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="irreverenteMobile" value="Irreverente">
+          <label for="irreverenteMobile" class="energia-ativa">
+            <i class="bi bi-eyeglasses"></i>
+            <span>Irreverente</span>
+          </label>
+        </div>
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="respeitosoMobile" value="Respeitoso">
+          <label for="respeitosoMobile" class="energia-ativa">
+            <i class="bi bi-person-standing"></i>
+            <span>Respeitoso</span>
+          </label>
+        </div>
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="entusiasmadoMobile" value="Entusiasmado">
+          <label for="entusiasmadoMobile" class="energia-ativa">
+            <i class="bi bi-stars"></i>
+            <span>Entusiasmado</span>
+          </label>
+        </div>
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="praticoMobile" value="Pratico">
+          <label for="praticoMobile" class="energia-ativa">
+            <i class="bi bi-lightbulb"></i>
+            <span>Prático</span>
+          </label>
+        </div>
+      </div>
+      <button type="button" class="voltar">Voltar</button>
+      <button type="button" class="proximo">Próximo</button>
+    </div>
+
+<!-- Capacidade: Qualificação -->
+<div class="box-of-selection div-pcd passo" id="passo-1">
+  <h5 class="text-left mb-3 text-white">🧠 Capacidades do Agente</h5>
+    <div class="habilidades-grid">
+    <div class="habilidade-box">
+        <input type="checkbox" id="cap1m" name="capacidade[]" value="Qualificação em tempo real">
+        <label for="cap1m">
+        <i class="bi bi-lightning-charge-fill"></i>
+        <span>Qualificação em tempo real</span>
+        </label>
+    </div>
+    <div class="habilidade-box">
+        <input type="checkbox" id="cap2m" name="capacidade[]" value="Anotacao Automatica">
+        <label for="cap2m">
+        <i class="bi bi-pencil-square"></i>
+        <span>Anotação automática</span>
+        </label>
+    </div>
+    </div>
+    <div class="habilidades-grid">
+    <div class="habilidade-box">
+        <input type="checkbox" id="cap3m" name="capacidade[]" value="Atualizacao no CRM">
+        <label for="cap3m">
+        <i class="bi bi-arrow-repeat"></i>
+        <span>Atualização no CRM</span>
+        </label>
+    </div>
+    <div class="habilidade-box">
+        <input type="checkbox" id="cap4m" name="capacidade[]" value="Agendamento de reunioes">
+        <label for="cap4m">
+        <i class="bi bi-calendar-check"></i>
+        <span>Agendamento de reuniões</span>
+        </label>
+    </div>
+    </div>
+    <div class="habilidades-grid">
+    <div class="habilidade-box">
+        <input type="checkbox" id="cap5m" name="capacidade[]" value="Notificacao via whatsapp">
+        <label for="cap5m">
+        <i class="bi bi-whatsapp"></i>
+        <span>Notificação via WhatsApp</span>
+        </label>
+    </div>
+    <div class="habilidade-box">
+        <input type="checkbox" id="cap6m" name="capacidade[]" value="Transferencia para closer">
+        <label for="cap6m">
+        <i class="bi bi-person-check"></i>
+        <span>Transferência para closer</span>
+        </label>
+    </div>
+    </div>
+    <div class="habilidades-grid ">
+    <div class="habilidade-box pcd">
+        <input type="checkbox" id="cap7m" name="capacidade[]" value="Registro em CRM mais Google Ads">
+        <label for="cap7m">
+        <i class="bi bi-bar-chart-line"></i>
+        <span>Registro em CRM + Google Ads</span>
+        </label>
+    </div>
+    </div>
+    <button type="button" class="voltar">Voltar</button>
+    <button type="button" class="proximo">Próximo</button>
+    </div>
+
+    <div class="box-of-selection box-especial passo" id="passo-1">
+      <!-- Tipo: SDR -->
+       <div class="so-pra-organizar">
+      <div class="form-check-select">
+        <input type="radio" name="tipo" id="sdr" class="form-check-input d-none" value="sdr">
+        <label for="sdr" class="card painel-card selectable-card">
+          <div class="card-body text-center">
+            <i class="bi bi-graph-up fs-1 display-icon"></i>
+            <h5 class="card-title">Tipo: SDR</h5>
+          </div>
+        </label>
+      </div>
+
+      <!-- Tipo: Suporte N1 -->
+      <div class="form-check-select">
+        <input type="radio" name="tipo" id="suporte" class="form-check-input d-none" value="suporte">
+        <label for="suporte" class="card painel-card selectable-card">
+          <div class="card-body text-center">
+            <i class="bi bi-headset fs-1 display-icon"></i>
+            <h5 class="card-title">Tipo: Suporte N1</h5>
+          </div>
+        </label>
+      </div>
+
+      <!-- Tipo: Customizado -->
+      <div class="form-check-select">
+        <input type="radio" name="tipo" id="custom" class="form-check-input d-none" value="Customizado">
+        <label for="custom" class="card painel-card selectable-card">
+          <div class="card-body text-center">
+            <i class="bi bi-sliders fs-1 display-icon"></i>
+            <h5 class="card-title">Tipo: Customizado</h5>
+          </div>
+        </label>
+      </div>
+      </div>
+        <button type="button" class="voltar">Voltar</button>
+        <button type="button" class="proximo">Próximo</button>
+      </div>
+
+
+      <!-------------------FORM FINAL-------------------->
+      <!-- Passo 6 – Dados pessoais -->
+      <div class="box-of-selection passo" id="passo-6">
+        <h3>Criar Conta</h3>
+        <input type="text" name="nome" placeholder="Nome completo" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <input type="tel" name="whatsapp" placeholder="WhatsApp" required>
+        <input type="text" name="cpf_cnpj" placeholder="CPF ou CNPJ" required>
+        <button type="button" class="voltar">Voltar</button>
+        <button type="button" class="proximo">Próximo</button>
+      </div>
+
+      <!-- Passo 7 – Endereço -->
+      <div class="box-of-selection passo" id="passo-7">
+        <h3>Endereço</h3>
+        <div class="inquilino">
+          <input class="dentro" type="text" name="cep" placeholder="CEP" required>
+          <input class="dentro" type="text" name="numero" placeholder="Número" required>
+        </div>
+        <input type="text" name="endereco" placeholder="Endereço" required>
+        <input type="text" name="complemento" placeholder="Complemento">
+        <input type="text" name="bairro" placeholder="Bairro" required>
+        <button type="button" class="voltar">Voltar</button>
+        <button type="submit" class="proximo">Enviar</button>
+      </div>
+
+
+
+  </form>
+
+<script>
+  const passos = document.querySelectorAll(".passo");
+  let passoAtual = 0;
+
+  function mostrarPasso(index) {
+    passos.forEach((passo, i) => {
+      passo.classList.toggle("ativo", i === index);
+    });
+  }
+
+  mostrarPasso(passoAtual); // mostra o primeiro passo
+
+  document.querySelectorAll(".proximo").forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (passoAtual < passos.length - 1) {
+        passoAtual++;
+        mostrarPasso(passoAtual);
+      }
+    });
+  });
+
+  document.querySelectorAll(".voltar").forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (passoAtual > 0) {
+        passoAtual--;
+        mostrarPasso(passoAtual);
+      }
+    });
+  });
+
+  document.getElementById("form-passo-a-passo").addEventListener("submit", (e) => {
+    e.preventDefault();
+      const dados = new FormData(e.target);
+      // Captura manual de inputs fora do alcance do FormData
+      document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked, input[type="text"], input[type="email"], input[type="tel"]').forEach(input => {
+        if (input.name && !dados.has(input.name)) {
+          dados.append(input.name, input.value);
+        }
+      });
+
+      dados.forEach((valor, chave) => {
+        console.log(`${chave}: ${valor}`);
+      });
+
+      fetch("https://webhook.connetx.com.br/webhook/306ab2f1-8d07-484c-9171-688826fa5362", {
+        method: "POST",
+        body: dados
+      })
+      .then(res => res.ok ? res.text() : Promise.reject("Erro no envio"))
+      .then(resposta => {
+        alert("Formulário enviado com sucesso!");
+      })
+      .catch(err => {
+        alert("Erro ao enviar: " + err);
+      });
+  });
+</script>
+<!--------------------------------------------- END MOBILE --------------------------------------------->
+
+
+
+    <!-- Painel Direito -->
+    <section class="painel-direito paineis-laterais">
+
+
+      <div class="desktop">
+      <div class="box-of-selection">
+      <!-- Tipo: SDR -->
+      <div class="form-check-select">
+        <input type="radio" name="tipo" id="sdr" class="form-check-input d-none">
+        <label for="sdr" class="card painel-card selectable-card">
+          <div class="card-body text-center">
+            <h5 class="card-title text-white">Tipo: SDR</h5>
+            <i class="bi bi-graph-up fs-1 display-icon"></i>
+          </div>
+        </label>
+      </div>
+
+      <!-- Tipo: Suporte N1 -->
+      <div class="form-check-select mt-3">
+        <input type="radio" name="tipo" id="suporte" class="form-check-input d-none">
+        <label for="suporte" class="card painel-card selectable-card">
+          <div class="card-body text-center">
+            <h5 class="card-title text-white">Tipo: Suporte N1</h5>
+            <i class="bi bi-headset fs-1 display-icon"></i>
+          </div>
+        </label>
+      </div>
+
+      <!-- Tipo: Customizado -->
+      <div class="form-check-select mt-3">
+        <input type="radio" name="tipo" id="custom" class="form-check-input d-none">
+        <label for="custom" class="card painel-card selectable-card">
+          <div class="card-body text-center">
+            <h5 class="card-title text-white">Tipo: Customizado</h5>
+            <i class="bi bi-sliders fs-1 display-icon"></i>
+          </div>
+        </label>
+      </div>
+      </div>
+
+      
+      <div class="box-of-selection">
+      <h5 class="text-left mb-3 text-white">🎭 Personalidade do Agente</h5>
+      <div class="personalidade-grid">
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="clonar">
+          <label for="clonar">
+            <i class="bi bi-person-lines-fill"></i>
+            <span>Clonar Tom</span>
+          </label>
+        </div>
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="formal">
+          <label for="formal">
+            <i class="bi bi-person-fill"></i>
+            <span>Formal</span>
+          </label>
+        </div>
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="casual">
+          <label for="casual">
+            <i class="bi bi-person"></i>
+            <span>Casual</span>
+          </label>
+        </div>
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="engracado">
+          <label for="engracado">
+            <i class="bi bi-emoji-smile"></i>
+            <span>Engraçado</span>
+          </label>
+        </div>
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="irreverente">
+          <label for="irreverente">
+            <i class="bi bi-eyeglasses"></i>
+            <span>Irreverente</span>
+          </label>
+        </div>
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="respeitoso">
+          <label for="respeitoso">
+            <i class="bi bi-person-standing"></i>
+            <span>Respeitoso</span>
+          </label>
+        </div>
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="entusiasmado">
+          <label for="entusiasmado">
+            <i class="bi bi-stars"></i>
+            <span>Entusiasmado</span>
+          </label>
+        </div>
+        <div class="personalidade-box">
+          <input type="radio" name="personalidade" id="pratico">
+          <label for="pratico">
+            <i class="bi bi-lightbulb"></i>
+            <span>Prático</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    </section>
+
+  </div>
+
+
+
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-----------------------------------------------------------------------START FORM DESKTOP----------------------------------------------------------------------->
+<!-- 🔒 MODAL DO FORMULÁRIO DESKTOP -->
+<div id="formulario-desktop" class="modal">
+  <div class="modal-content">
+    <span id="fechar-form-desktop" class="fechar">&times;</span>
+
+    <form id="form-dados-agente">
+      <!-- Passo 1: Dados Pessoais -->
+      <div class="passo ativo" id="form-dados">
+        <h3>Dados Pessoais</h3>
+        <input type="text" name="nome" placeholder="Nome completo" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <input type="tel" name="whatsapp" placeholder="WhatsApp" required>
+        <input type="text" name="cpf_cnpj" placeholder="CPF ou CNPJ" required>
+        <button type="button" class="proximo">Próximo</button>
+      </div>
+
+      <!-- Passo 2: Endereço -->
+      <div class="passo" id="form-endereco">
+        <h3>Endereço</h3>
+        <input type="text" name="cep" placeholder="CEP" required>
+        <input type="text" name="endereco" placeholder="Endereço" required>
+        <input type="text" name="numero" placeholder="Número" required>
+        <input type="text" name="complemento" placeholder="Complemento">
+        <input type="text" name="bairro" placeholder="Bairro" required>
+        <button type="button" class="voltar">Voltar</button>
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- 🧠 JS DO MODAL E NAVEGAÇÃO ENTRE PASSOS -->
+<script>
+  const modal = document.getElementById("formulario-desktop");
+  const fecharBtn = document.getElementById("fechar-form-desktop");
+  const abrirBtn = document.getElementById("abrir-form-desktop"); // já existe no seu HTML
+
+  const passo1 = document.getElementById("form-dados");
+  const passo2 = document.getElementById("form-endereco");
+  const form = document.getElementById("form-dados-agente");
+
+  // Abrir modal
+  abrirBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+    passo1.classList.add("ativo");
+    passo2.classList.remove("ativo");
+  });
+
+  // Fechar modal
+  fecharBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  // Navegação entre passos
+  passo1.querySelector(".proximo").addEventListener("click", () => {
+    passo1.classList.remove("ativo");
+    passo2.classList.add("ativo");
+  });
+
+  passo2.querySelector(".voltar").addEventListener("click", () => {
+    passo2.classList.remove("ativo");
+    passo1.classList.add("ativo");
+  });
+
+  // Envio via AJAX
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const dados = new FormData(form);
+
+    dados.forEach((valor, chave) => {
+      console.log(`${chave}: ${valor}`);
+    });
+
+    fetch("https://webhook.connetx.com.br/webhook/306ab2f1-8d07-484c-9171-688826fa5362", {  //https://webhook.connetx.com.br/webhook/306ab2f1-8d07-484c-9171-688826fa5362
+      method: "POST",
+      body: dados
+    })
+    .then(res => res.ok ? res.text() : Promise.reject("Erro no envio"))
+    .then(resposta => {
+      alert("Formulário enviado com sucesso!");
+      modal.style.display = "none";
+      form.reset();
+      passo1.classList.add("ativo");
+      passo2.classList.remove("ativo");
+    })
+    .catch(err => {
+      alert("Erro ao enviar: " + err);
+    });
+  });
+</script>
+<!-----------------------------------------------------------------------END FORM DESKTOP------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+<!-- FORMULÁRIO -->
+<script>
+  const btnProximo = document.getElementById("btn-proximo");
+  const formulario = document.getElementById("formulario-agente");
+
+  btnProximo.addEventListener("click", () => {
+    formulario.style.display = "block";
+    formulario.scrollIntoView({ behavior: "smooth" });
+  });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+  const imgAgente = document.getElementById("img-agente");
+
+  let generoSelecionado = null;
+  let personalidadeSelecionada = null;
+
+  // Detecta se está em mobile
+  let isMobile = window.innerWidth <= 768;
+
+  // Seleção padrão ao carregar
+window.addEventListener("load", () => {
+  generoSelecionado = "masculino"; // ou "feminino"
+  personalidadeSelecionada = window.innerWidth <= 768 ? "casualMobile" : "casual";
+
+  atualizarImagem();
+});
+
+  // Atualiza se redimensionar (opcional)
+  window.addEventListener("resize", () => {
+    isMobile = window.innerWidth <= 768;
+  });
+
+  // Gênero
+  document.querySelectorAll('input[name="genero"]').forEach(input => {
+    input.addEventListener("change", () => {
+      generoSelecionado = input.id;
+      atualizarImagem();
+    });
+  });
+
+  // Personalidade
+  document.querySelectorAll('input[name="personalidade"]').forEach(input => {
+    input.addEventListener("change", () => {
+      personalidadeSelecionada = input.id;
+      atualizarImagem();
+    });
+  });
+
+  function atualizarImagem() {
+    if (generoSelecionado && personalidadeSelecionada) {
+      const nome = isMobile
+        ? `${personalidadeSelecionada}Mobile-${generoSelecionado}.webp`
+        : `${personalidadeSelecionada}-${generoSelecionado}.webp`;
+
+      const novoSrc = `imgs/${nome}`;
+
+      imgAgente.style.opacity = 0;
+
+      setTimeout(() => {
+        imgAgente.src = novoSrc;
+        imgAgente.onload = () => {
+          imgAgente.style.opacity = 1;
+        };
+      }, 300);
+    }
+  }
+</script>
+
+<!--------------------------------------------- MUDAR NOME --------------------------------------------->
+<script>
+  const inputs = document.querySelectorAll(".nome-agente");
+  const titulo = document.querySelector(".titulo-principal");
+
+  inputs.forEach(input => {
+    input.addEventListener("input", () => {
+      const valor = input.value.trim();
+      if (valor !== "") {
+        titulo.textContent = valor;
+        titulo.style.textAlign = "center";
+      } else {
+        titulo.textContent = "Laboratório de Agentes";
+        titulo.style.textAlign = "";
+      }
+    });
+  });
+</script>
+
+
+
+<!-- APLICAÇÃO DO EFEITO DE ENERGIA AOS ERROS -->
+<script>
+  function aplicarEstiloGlobalDeSelecao() {
+    const inputs = document.querySelectorAll('input[type="radio"], input[type="checkbox"]');
+
+    inputs.forEach(input => {
+      input.addEventListener('change', () => {
+        // Lógica para RADIO: Remove o estilo dos outros cards do mesmo grupo
+        if (input.type === 'radio') {
+          const grupo = document.querySelectorAll(`input[name="${input.name}"]`);
+
+          grupo.forEach(el => {
+            const labels = document.querySelectorAll(`label[for="${el.id}"]`);
+            labels.forEach(lbl => {
+              lbl.classList.remove('selecionado');
+              lbl.style.boxShadow = '';
+              lbl.style.borderColor = '';
+              lbl.style.color = '';
+              lbl.style.backgroundColor = '';
+              lbl.style.position = '';
+              const icone = lbl.querySelector('i');
+              if (icone) icone.style.color = '';
+            });
+          });
+        }
+
+        // Lógica para aplicar ou remover estilo com base no estado do input
+        const labels = document.querySelectorAll(`label[for="${input.id}"]`);
+
+        if (input.checked) {
+          labels.forEach(label => {
+            label.classList.add('selecionado');
+            label.style.borderColor = '#00ff88';
+            label.style.boxShadow = '0 0 10px rgba(0, 255, 136, 0.3)';
+            label.style.color = '#fff';
+            label.style.position = 'relative';
+
+            const icone = label.querySelector('i');
+            if (icone) icone.style.color = '#00ff88';
+
+            // Adiciona o efeito de "energia" apenas quando um item é selecionado
+            const efeito = document.createElement('span');
+            efeito.className = 'efeito-energia';
+            label.appendChild(efeito);
+
+            setTimeout(() => {
+              if (efeito && efeito.parentNode) {
+                efeito.parentNode.removeChild(efeito);
+              }
+            }, 400);
+          });
+        } else {
+          // Lógica para desmarcar o checkbox
+          labels.forEach(label => {
+            label.classList.remove('selecionado');
+            label.style.boxShadow = '';
+            label.style.borderColor = '';
+            label.style.color = '';
+            label.style.backgroundColor = '';
+            label.style.position = '';
+            const icone = label.querySelector('i');
+            if (icone) icone.style.color = '';
+          });
+        }
+      });
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", aplicarEstiloGlobalDeSelecao);
+</script>
+
+</body>
+</html>

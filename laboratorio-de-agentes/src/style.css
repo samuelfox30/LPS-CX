@@ -1,0 +1,636 @@
+/* ----- IMPORTAR FONTE FUTURISTA ----- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+/* ----- BASE ----- */
+html, body {
+  margin: 0;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  overflow-y: hidden;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  /* background-color: rgb(51, 51, 51); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.full-height {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-gif {
+  background-image: url('imgs/fundo-futuristico.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  z-index: -2;
+}
+
+.background-gif::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+/* ----- HEADER ESTILIZADO ----- */
+.header-top {
+  height: 10vh;
+  background-color: #111;
+  border-bottom: 2px solid #bf01c9;
+  box-shadow: 0 0 20px rgba(191, 1, 201, 0.3);
+}
+
+.titulo-principal {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #bf01c9;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.514);
+}
+
+/* ----- BOTÃO PRÓXIMO ESTILIZADO ----- */
+.btn-proximo {
+  background: linear-gradient(90deg, #bf01c9, #8a01c9);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-proximo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  transform: skewX(-20deg);
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+.btn-proximo:hover::before {
+  left: 100%;
+}
+
+.btn-proximo:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.8);
+  transform: scale(1.05);
+  color: #000;
+}
+
+/* ----- LAYOUT ----- */
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.paineis-laterais{
+  /* background-color: rgba(250, 235, 215, 0.541); */
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* .painel-esquerdo{
+
+} */
+
+/* .painel-direito{
+  
+} */
+
+.painel-central {
+  /* background-color: #222; */
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-central {
+  max-height: 80vh;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  /* box-shadow: 0 0 20px rgba(191, 1, 201, 0.4); */
+}
+
+.box-of-selection{
+  box-shadow: 0 0 30px rgba(176, 100, 180, 0.438);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* ----- CARDS RETANGULARES UNIFORMES ----- */
+.painel-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(191, 1, 201, 0.1);
+  width: 320px;
+  height: 100px;
+  border: 2px solid #bf01c9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  gap: 1rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.painel-card:hover {
+  box-shadow: 0 0 20px rgba(191, 1, 201, 0.4);
+  transform: scale(1.02);
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #bf01c9;
+  margin: 0;
+  flex: 1;
+}
+
+/* ----- INPUT PERSONALIZADO ----- */
+.custom-input .form-control {
+  background-color: #0d0d0d;
+  border: 2px solid #bf01c9;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.custom-input .form-control:focus {
+  box-shadow: 0 0 10px #bf01c9;
+  border-color: #bf01c9;
+}
+
+
+/* ----- ÍCONES ----- */
+.display-icon {
+  font-size: 2.5rem;
+  color: #bf01c9;
+  transition: color 0.3s ease;
+  z-index: 2;
+}
+
+.selectable-card:hover .display-icon {
+  color: #ffffff;
+}
+
+.form-check-input:checked + .selectable-card .display-icon {
+  color: #ffffff;
+}
+
+/* ----- SELECIONÁVEIS COM EFEITO DE ENERGIA ------------------------------------------------------------------------------------- ENERGIA */
+.selectable-card {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+}
+
+/* .form-check-input:checked + .selectable-card {
+  background-color: #222;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+  transform: scale(1.03);
+  border-color: #00ff88;
+}
+
+.form-check-input:checked + .selectable-card::before {
+  display: flex;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #00ff88, transparent);
+  animation: energiaFlash 0.4s ease-out forwards;
+  z-index: 0;
+  border-radius: 12px;
+} */
+
+/* ----- PERSONALIDADE EM DUAS COLUNAS COM EFEITO ----- */
+.personalidade-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  width: 320px;
+}
+
+.personalidade-box {
+  position: relative;
+}
+
+.personalidade-box input[type="radio"] {
+  display: none;
+}
+
+.personalidade-box label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1a1a1a;
+  border: 2px solid #bf01c9;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.personalidade-box label i {
+  font-size: 1rem;
+  color: #bf01c9;
+  transition: color 0.3s ease;
+  z-index: 2;
+}
+
+/* .personalidade-box input[type="radio"]:checked + label {
+  border-color: #00ff88;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+  color: #fff;
+}
+
+.personalidade-box input[type="radio"]:checked + label i {
+  color: #00ff88;
+}
+
+.personalidade-box input[type="radio"]:checked + label::before {
+  display: flex;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #00ff88, transparent);
+  animation: energiaFlash 0.4s ease-out forwards;
+  z-index: 0;
+  border-radius: 8px;
+} */
+
+/* ----- PAINEL 3 – HABILIDADES DO AGENTE ----- */
+.habilidades-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.habilidade-box {
+  position: relative;
+}
+
+.habilidade-box input[type="checkbox"] {
+  display: none;
+}
+
+.habilidade-box label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1a1a1a;
+  border: 2px solid #bf01c9;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.habilidade-box label i {
+  font-size: 1rem;
+  color: #bf01c9;
+  transition: color 0.3s ease;
+  z-index: 2;
+}
+
+/* .habilidade-box input[type="checkbox"]:checked + label {
+  border-color: #00ff88;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+  color: #fff;
+}
+
+.habilidade-box input[type="checkbox"]:checked + label i {
+  color: #00ff88;
+}
+
+.habilidade-box input[type="checkbox"]:checked + label::before {
+  display: flex;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #00ff88, transparent);
+  animation: energiaFlash 0.4s ease-out forwards;
+  z-index: 0;
+  border-radius: 8px;
+} */
+
+/* ----- ANIMAÇÃO DE ENERGIA ----- */
+/* @keyframes energiaFlash {
+  0% {
+    width: 0%;
+    opacity: 0.6;
+  }
+  100% {
+    width: 100%;
+    opacity: 0.15;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----- GÊNERO COM ÍCONES EM BLOCO ----- */
+.genero-grid {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.genero-box {
+  position: relative;
+}
+
+.genero-box input[type="radio"] {
+  display: none;
+}
+
+.genero-box label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: #1a1a1a;
+  border: 2px solid #bf01c9;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.genero-box label i {
+  font-size: 2.5rem;
+  color: #bf01c9;
+  transition: color 0.3s ease;
+  z-index: 2;
+}
+
+/* .genero-box input[type="radio"]:checked + label {
+  border-color: #00ff88;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+  transform: scale(1.05);
+}
+
+.genero-box input[type="radio"]:checked + label i {
+  color: #00ff88;
+}
+
+.genero-box input[type="radio"]:checked + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #00ff88, transparent);
+  animation: energiaFlash 0.4s ease-out forwards;
+  z-index: 0;
+  border-radius: 20px;
+} */
+
+
+
+
+/* Transição suave na imagem central */
+.img-central {
+  transition: opacity 0.4s ease;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------FORM DESKTOP-----------------------------------*/
+  .modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #bf01c9;
+  width: 90%;
+  max-width: 500px;
+  color: #fff;
+  position: relative;
+}
+
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  color: #bf01c9;
+  cursor: pointer;
+}
+
+.passo {
+  display: none;
+}
+
+.passo.ativo {
+  display: block;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px 5px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #bf01c9;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-content input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-content input:focus {
+  border-bottom: 2px solid #00ff88;
+  box-shadow: 0 2px 10px rgba(0, 255, 136, 0.3);
+}
+
+.proximo,
+.voltar,
+.modal-content button[type="submit"] {
+  width: 120px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  background: linear-gradient(90deg, #bf01c9, #6f00ff);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 12px rgba(191, 1, 201, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.proximo:hover,
+.voltar:hover,
+.modal-content button[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(191, 1, 201, 0.6);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.selecionado {
+  border: 2px solid #00ff88;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.efeito-energia {
+  display: flex;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #00ff88, transparent);
+  animation: energiaFlash 0.4s ease-out forwards;
+  z-index: 0;
+  border-radius: 8px;
+}
+
+@keyframes energiaFlash {
+  from {
+    opacity: 0.6;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+
+

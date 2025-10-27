@@ -1,0 +1,334 @@
+@media screen and (max-width: 1000px) {
+
+    .all {
+        height: 90%;
+        flex-direction: column;
+        justify-content: right;
+    }
+
+    /*Header top*/
+    .header-top {
+        height: 10%;
+        background-color: #111;
+        border-bottom: none;
+        box-shadow: 0 0 20px rgba(191, 1, 201, 0.3);
+    }
+    .btn-proximo{
+        display: none;
+    }
+    .titulo-principal{
+        font-size: 20px;
+    }
+
+    /*Ajustando divs-max*/
+    .painel-central {
+        /* background-color: #222; */
+        width: 100%;
+        height: 40%;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+    }
+    /*Img central*/
+    .img-central {
+        max-height: none;
+        max-width: none;
+        height: 100%;
+        border-radius: 12px;
+    }
+
+    .mobile {
+        /* background-color: rgb(48, 177, 48); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60%;
+    }
+
+    .box-of-selection{
+        /* background-color: #222; */
+        padding-top: 40px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        height: 100%;
+    }
+
+
+    /* --------------- NOME DO AGENTE ------------------------------ */
+    .painel-card {
+        margin-top: 20px;
+    }
+    /* --------------- GENERO ------------------------------ */
+    /* --------------- PERSONALIDADE ------------------------------ */
+    .personalidade-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        width: 90%;
+    }
+    .personalidade-box {
+        position: relative;
+    }
+    /* --------------- HABILIDADES ------------------------------ */
+    .div-pcd{
+        padding-top: 30px
+    }
+    .habilidades-grid {
+        /* background-color: aliceblue; */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+        min-height: 60px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .habilidade-box {
+        width: 48%;
+    }
+    .pcd{
+        width: 98%;
+    }
+    .habilidade-box span{
+        font-size: 12px;
+    }
+    /* --------------- TIPO DE AGENTE ------------------------------ */
+    .box-especial{
+        padding:0px;
+        display: flex;
+        flex-direction: c;
+        justify-content: left;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+/*     .form-check-select .card-body-diferente{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 30px;
+        width:  20%;
+        max-width: none;
+        height: 100px;
+    } */
+    .form-check-select .painel-card{
+        min-width: 100px;
+        height: 60px;
+        border: #bf01c9 2px solid;
+    }
+    .form-check-select .card-body h5{
+        font-size: 16px;
+        padding-left: 10px;
+        color: #fff;
+    }
+    .form-check-select .card-body{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+    }
+    .so-pra-organizar{
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: left;
+        width: 100%;
+        height: 100%;
+    }
+    /*----------------- FORM ----------------------------------*/
+    /*Passo 6*/
+    #passo-6 input[type="text"],
+    #passo-6 input[type="email"],
+    #passo-6 input[type="tel"] {
+        width: 100%;
+        padding: 10px 5px;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid #fff;
+        color: #fff;
+        font-size: 12px;
+        outline: none;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 1rem;
+    }
+
+    #passo-6 input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    #passo-6 input:focus {
+        border-bottom: 2px solid #bf01c9;
+        box-shadow: 0 2px 10px rgba(0, 255, 136, 0.3);
+    }
+
+    /*Passo 7*/
+    #passo-7 input[type="text"],
+    #passo-7 input[type="email"],
+    #passo-7 input[type="tel"] {
+        width: 100%;
+        padding: 10px 5px;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid #fff;
+        color: #fff;
+        font-size: 12px;
+        outline: none;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 1rem;
+    }
+
+    #passo-7 input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    #passo-7 input:focus {
+        border-bottom: 2px solid #bf01c9;
+        box-shadow: 0 2px 10px rgba(0, 255, 136, 0.3);
+    }
+
+    .inquilino {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .dentro{
+        width: 45%;
+        margin: 5px;
+    }
+
+
+    /* --------------- BOTOES ------------------------------ */
+    .voltar{
+        padding: 5px 20px;
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        width: auto;
+        height: auto;
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+        background: linear-gradient(90deg, #bf01c9, #8a01c9);
+        border: none;
+        border-radius: 30px;
+        box-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 1;
+        overflow: hidden;
+    }
+    .proximo {
+        padding: 5px 20px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        width: auto;
+        height: auto;
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+        background: linear-gradient(90deg, #bf01c9, #8a01c9);
+        border: none;
+        border-radius: 30px;
+        box-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+
+
+
+    /* CONFIGURANDO PASSOS */
+    .passo {
+        display: none;
+    }
+    .passo.ativo {
+        display: flex;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* -------- Tirando coisas de pequenos Ajustes --------*/
+
+    .desktop {
+        display: none;
+    }
+    .paineis-laterais{
+        display: none;
+    }
+    .painel-direito {
+        display: none;
+    }
+    /*Tirando margem*/
+    .paineis-laterais{
+        margin: 0;
+    }
+    /*Tirando overflow*/
+    .btn-proximo {
+        overflow: scroll;
+    }
+    .painel-card {
+        overflow: scroll;
+    }
+
+
+
+
+
+/* EFEITO DE ENERGIOA QUE NÃO FUNCIONOU */
+
+}
+
+
+
+
