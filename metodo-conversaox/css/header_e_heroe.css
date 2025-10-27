@@ -1,0 +1,52 @@
+/*BOTH --------------------------------------------------------*/
+.hero-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('../assets/img/outroGifLaranja.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*HEADER --------------------------------------------------------*/
+header {
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.15);
+  z-index: 10;
+  position: relative;
+}
+
+/*HERO --------------------------------------------------------*/
+.hero-text-box {
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.hero-book {
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.08));
+}
+
+.hero-text-box {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.padding-hero{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* ------- TITULOS E DIMENSIONAMENTOS --------*/
+.titulo-grande {
+  font-size: 3rem;
+}
+
+@media (max-width: 500px) {
+  .titulo-grande {
+    font-size: 2rem;
+  }
+  .padding-hero{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  }
+}

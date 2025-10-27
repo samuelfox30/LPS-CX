@@ -1,0 +1,33 @@
+.video-thumbnail {
+  cursor: pointer;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: #0d6efd;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 0.5rem 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.video-thumbnail:hover .play-button {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

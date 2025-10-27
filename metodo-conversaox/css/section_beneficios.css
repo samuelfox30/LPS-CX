@@ -1,0 +1,17 @@
+.benefit-box {
+  transition: 0.3s;
+  background-color: #121212;
+  border-radius: 12px;
+  box-shadow: 0 0px 20px rgba(255, 255, 255, 0.4);
+  /* border: 1px solid white; */
+}
+
+.benefit-box:hover {
+  transition: 0.3s;
+  transform: translateY(-5px);
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.4);
+}
+
+.especial{
+    background-color: #1b1b1b;
+}
