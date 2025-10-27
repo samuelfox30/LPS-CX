@@ -1,0 +1,49 @@
+/*CARROSSEL*/
+@media (max-width: 500px) {
+
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
+
+}
+
+
+/*PARA VOADORA -> Mexe na de cima e a de baixo*/
+@media (max-width: 992px) {
+    .padding-para-cima{
+        padding-top: 300px;
+    }   
+
+    .padding-para-baixo{
+        padding-bottom: 340px;
+    }
+}
+@media (max-width: 850px) {
+    .padding-para-cima{
+        padding-top: 400px;
+    }   
+
+    .padding-para-baixo{
+        padding-bottom: 470px;
+    }
+}
+
+
+/* HERO */
+@media (max-width: 850px) {
+    .btn-hero {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.4rem;
+        min-width: auto;
+        margin-bottom: 50px;
+    }
+}
+
+
+/* HEADER */
+@media (max-width: 850px) {
+    
+}

@@ -1,0 +1,393 @@
+/* Estilo personalizado para o header */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+
+  /* Fundo com imagem */
+  background-image: url('imgs/fundo-body.png'); /* substitua pelo caminho correto da sua imagem */
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* opcional: mantém o fundo fixo ao rolar */
+}
+
+/* Overlay branco translúcido */
+body::before {
+  content: "";
+  position: fixed; /* cobre toda a tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.90); /* branco com transparência */
+  z-index: -1;
+  pointer-events: none; /* permite clicar nos elementos abaixo */
+}
+
+
+.bg-red-sei{
+  background-color: #fc022a;
+}
+
+.text-red-sei{
+  color: #fc022a;
+}
+
+.padding-para-cima{
+  padding-top: 240px;
+}
+
+.padding-para-baixo{
+  padding-bottom: 290px;
+}
+
+
+/* -------------------------------------------- ALL --------------------------------------------*/
+
+.font-sei{
+    color: #fc022a;
+}
+
+.bg-sei {
+  background-color: #fc022a;
+
+}
+
+.pt-5-meu{
+  padding-top: 90px;
+}
+
+/*-------------------- HEADER ----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Header */
+.header-custom {
+  background-color: transparent;
+  position: static;
+}
+
+/* Ícones sociais */
+.social-icons a {
+  color: rgb(0, 0, 0);
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #fc022a;
+}
+
+/* Botão custom */
+.btn-custom {
+  background-color: #fc022a;
+  color: white;
+  border-radius: 25px;
+  padding: 6px 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-custom:hover {
+  background-color: #fc022a;
+  color: white;
+}
+
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
+@media (max-width: 768px) {
+  /* Logo menor */
+  .logo-header {
+    height: 40px; /* antes era 60px */
+  }
+
+  /* Botão menor */
+  .btn-custom {
+    padding: 4px 10px;
+    font-size: 14px;
+  }
+
+  /* Ícones sociais mais compactos */
+  .social-icons {
+    gap: 0.8rem; /* diminui o espaço entre os ícones */
+  }
+}
+
+@media (max-width: 576px) {
+  /* Logo ainda menor em telas muito pequenas */
+  .logo-header {
+    height: 32px;
+  }
+
+  /* Botão ainda mais compacto */
+  .btn-custom {
+    padding: 3px 8px;
+    font-size: 13px;
+  }
+}
+
+/* ---------------- HEROE ----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.juntos{
+  background-image: url('imgs/fundo-hero.png'); /* sua imagem de fundo */
+  background-attachment: fixed;
+}
+
+.hero-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.hero-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-hero {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.6rem;
+  min-width: 200px;
+  border-radius: 20px;
+}
+
+.img-hero{
+  max-height: 540px;
+}
+
+/* -------------------------------------------- O QUE FAZEMOS --------------------------------------------*/
+
+/* Seção "O que nós fazemos?" */
+section.bg-dark {
+  background-color: #000;
+}
+
+section.bg-dark h2 {
+  color: #ff0000; /* Destaque no título, se quiser */
+}
+
+.bg-preto{
+  background-image: url("imgs/bg-preto.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* -------------------------------------------- VOADORA --------------------------------------------*/
+
+/* Container principal */
+.voadora2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+/* Card central */
+.card-voadora2 {
+  position: absolute; /* é pra deixar absolute mesmo ! */
+  border-radius: 40px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1550px;
+  max-width: 95%;
+  padding: 60px;
+}
+
+/* Container de texto */
+.card-voadora2 .texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Card individual */
+.card-da-voadora {
+  background-color: rgb(44, 44, 44);
+  border-radius: 20px;
+  transition: transform 0.2s ease;
+  height: 100%;
+}
+
+/* Efeito hover opcional */
+.card-da-voadora:hover {
+  transform: translateY(-5px);
+}
+
+/* Ícones */
+.card-da-voadora img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(21%) sepia(99%) saturate(7480%) hue-rotate(356deg) brightness(101%) contrast(105%);
+}
+
+/* Títulos */
+.card-da-voadora h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px; /* mais compacto */
+}
+
+/* Parágrafos */
+.card-da-voadora p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.3; /* mais junto */
+  margin-bottom: 0;
+}
+
+/* Espaçamento entre colunas */
+.card-voadora2 .row {
+  --bs-gutter-x: 1.2rem; /* controla o espaço horizontal entre os cards */
+  --bs-gutter-y: 1.2rem; /* controla o espaço vertical no mobile */
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .card-voadora2 {
+    padding: 40px 20px;
+  }
+}
+/* -------------------------------------------- FUNÇÕES --------------------------------------------*/
+
+/* Seção de segurança e histórico */
+.bg-black {
+  background-color: #000;
+}
+
+.text-danger {
+  color: #fc022a !important;
+}
+
+.btn-danger {
+  background-color: #fc022a !important;
+}
+
+/* -------------------------------------------- ESTATISTICA --------------------------------------------*/
+
+/* Ícones da seção de estatísticas */
+section.bg-danger img {
+  filter: brightness(0) invert(1); /* Garante que os ícones fiquem brancos sobre fundo vermelho */
+}
+
+.divisor {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 1px;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.4); /* traço branco suave */
+}
+
+/* -------------------------------------------- CARROSSEL 1 --------------------------------------------*/
+
+.mobile{
+  display: none;
+}
+
+.clientes-section {
+  padding-bottom: 350px;
+}
+
+.logo-cliente {
+  max-height: 100px;
+  object-fit: contain;
+  border: 1px solid #ccc;       /* Bordinha fininha cinza */
+  border-radius: 8px;             /* Cantos arredondados */
+  padding: 4px;                   /* Espaço interno pra não grudar na borda */
+  background-color: #fff;       /* Fundo branco pra destacar */
+  width: 100%;
+  max-width: 150px;               /* ou o valor que quiser */
+}
+
+.custom-control {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  padding: 3px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #444444; /* vermelho SEI */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* -------------------------------------------- CARROSSEL 2 --------------------------------------------*/
+
+.logo-cliente {
+  max-height: 140px;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 6px;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.custom-control {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #fc022a;
+  border-radius: 50%;
+  padding: 12px;
+}
+
+/* FAQ */
+
+.bg-fundo-perguntas{
+  background-image: url("imgs/bg-branco.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* -------------------------------------------- FOOTER --------------------------------------------*/
+
+.footer-sei {
+  padding-top: 70px;
+  background-color: #afafaf;
+  font-size: 0.95rem;
+}
+
+.footer-sei p {
+  margin-bottom: 0.4rem;
+}
+
+
+
+/* OUTROS */
+
+.btn-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*v2*/
+.btn-hover2 {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-hover2:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
+}
